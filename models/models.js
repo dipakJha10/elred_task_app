@@ -25,6 +25,9 @@ const userSchema = new mongoose.Schema({
 });
 
 const authModel = new mongoose.Schema({
+  userId: {
+    type: String,
+  },
   email: {
     type: String,
     required: true,

@@ -25,7 +25,7 @@ router.post("/signUp", async (req, res) => {
     res.status(200).json({
       status: httpStatus.OK,
       message: constants.constants.SUCCCESS_MSG,
-      data: newUser,
+      data: "user has been registered",
     });
   } catch (error) {
     console.log(error);

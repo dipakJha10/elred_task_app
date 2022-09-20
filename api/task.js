@@ -6,11 +6,11 @@ const taskModel = models.task;
 const userAuthModel = models.auth;
 const userModel = models.user;
 
-// cretaing task
+// creating task
 
 router.post("/task", async (req, res) => {
   try {
-    const user = await userAuthModel.findOne({ email: req.query.email });
+    const user = await userModel.findOne({ email: req.query.email });
     console.log(user);
     const task = new taskModel({
       userId: user._id,
@@ -72,7 +72,7 @@ router.delete("/deleteTask", async (req, res) => {
     res.status(200).json({
       status: httpStatus.OK,
       message: constants.constants.SUCCCESS_MSG,
-      data: task,
+      message:"task has been deleted",
     });
   } catch (error) {
     console.log(error);
