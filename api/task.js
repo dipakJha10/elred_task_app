@@ -68,12 +68,18 @@ router.delete("/deleteTask", async (req, res) => {
     const task = await taskModel.findOneAndDelete({
       userId: req.body.userId,
     });
-    console.log(task);
-    res.status(200).json({
-      status: httpStatus.OK,
-      message: constants.constants.SUCCCESS_MSG,
-      message:"task has been deleted",
-    });
+    if (task) {
+      res.status(200).json({
+        status: httpStatus.OK,
+        message: constants.constants.SUCCCESS_MSG,
+      });
+    } else {
+      res.status(200).json({
+        status: httpStatus.OK,
+
+        message: "specified task is not there",
+      });
+    }
   } catch (error) {
     console.log(error);
     res.status(500).send({

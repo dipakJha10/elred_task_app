@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "2b54c4b4-d38b-4a45-ad5a-58967de5a7fb",
+		"name": "elred_task_nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13375363"
+	},
+	"item": [
+		{
+			"name": "signUp api",
+			"item": [
+				{
+					"name": "SignUpUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"fullName\":\"Deepak kashyap\",\r\n     \"email\":\"dipakjha.16b@gmail.com\",\r\n     \"password\":\"Deeepak@12345\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/signUp",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LogIn",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpcGFramhhLjE2YkBnbWFpbC5jb20iLCJpYXQiOjE2NjM2NjU4MjgsImV4cCI6MTY2MzY2NTg1OH0.CXvLGT3nYrUIsp-pBUZT969ERiK6YZHSMww5VrhsgWw\"",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"dipakjha.16b@gmail.com\",\r\n     \"password\":\"Deeepak@12345\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/passwordlogIn",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"passwordlogIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logInOTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2NjU5NTcsImV4cCI6MTY2MzY2NTk4N30.tZPD3O12J47pYl1p4CqJ-IjLp9q-JVxc2GBREjrHp6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":12575\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/otpLogin",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"otpLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOtp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"dipakjha.16b@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/emailLogin",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"emailLogin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2NzMzOTYsImV4cCI6MTY2MzY3Njk5Nn0.zSpaF5NmHwP3_2dB1pYN_rHqTlb34_r3sOZ214_Apxw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task\":\"coding daily for atleast 4hours\",\r\n    \"status\":\"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/task?email=dipakjha.16b@gmail.com",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"task"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "dipakjha.16b@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2NzMzOTYsImV4cCI6MTY2MzY3Njk5Nn0.zSpaF5NmHwP3_2dB1pYN_rHqTlb34_r3sOZ214_Apxw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Not completed yet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/editTask?userId=6329a3a6d2271a54f22072f4",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"editTask"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6329a3a6d2271a54f22072f4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2NzMzOTYsImV4cCI6MTY2MzY3Njk5Nn0.zSpaF5NmHwP3_2dB1pYN_rHqTlb34_r3sOZ214_Apxw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"6329a3a6d2271a54f22072f4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/deleteTask",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteTask"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
