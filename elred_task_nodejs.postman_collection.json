@@ -1123,6 +1123,72 @@
 							"body": "{\n    \"status\": 200,\n    \"message\": \"Request Successfull..!!\"\n}"
 						}
 					]
+				},
+				{
+					"name": "mysterious-reef-81155.herokuapp.com/api/fetchTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/fecthTask",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"fecthTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mysterious-reef-81155.herokuapp.com/api/fecthTask?userId=63315a4f27fcfd2960f0254d",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/fecthTask?userId=63315a4f27fcfd2960f0254d",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"fecthTask"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "63315a4f27fcfd2960f0254d"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
@@ -1149,13 +1215,9 @@
 	],
 	"variable": [
 		{
-			"key": "acess_token",
+			"key": "access_token",
 			"value": "",
 			"type": "string"
-		},
-		{
-			"key": "access_token",
-			"value": ""
 		}
 	]
 }
