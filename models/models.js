@@ -4,7 +4,6 @@ const userSchema = new mongoose.Schema({
   fullName: {
     type: String,
     required: true,
-    unique: true,
   },
   email: {
     type: String,
@@ -14,7 +13,6 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-    unique: true,
   },
   isActive: {
     type: Boolean,
@@ -37,7 +35,7 @@ const authModel = new mongoose.Schema({
 
 const taskModel = new mongoose.Schema({
   userId: {
-    type: String,    
+    type: String,
   },
   task: {
     type: String,
