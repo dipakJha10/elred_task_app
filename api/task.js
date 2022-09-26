@@ -39,12 +39,9 @@ router.post("/task", async (req, res) => {
 
 router.patch("/editTask", async (req, res) => {
   try {
-    const task = await taskModel.findOneAndUpdate(
-      { userId: req.query.userId },
-
-      req.body,
-      { new: true }
-    );
+    const task = await taskModel.findByIdAndUpdate(req.body.task_id, req.body, {
+      new: true,
+    });
     console.log(task);
     res.status(200).json({
       status: httpStatus.OK,
@@ -65,9 +62,7 @@ router.patch("/editTask", async (req, res) => {
 
 router.delete("/deleteTask", async (req, res) => {
   try {
-    const task = await taskModel.findOneAndDelete({
-      userId: req.body.userId,
-    });
+    const task = await taskModel.findByIdAndDelete(req.body.task_id);
     if (task) {
       res.status(200).json({
         status: httpStatus.OK,
@@ -80,6 +75,43 @@ router.delete("/deleteTask", async (req, res) => {
         message: "specified task is not there",
       });
     }
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      status: httpStatus.INTERNAL_SERVER_ERROR,
+      message: constants.constants.FAILURE_MSG,
+      data: null,
+    });
+  }
+});
+
+router.delete("/fecthTask", async (req, res) => {
+  try {
+    let result;
+    if (req.query.userId) {
+      result = await taskModel.find({
+        userId: req.query.userId,
+      });
+    } else {
+      let offset;
+      let limit;
+      if (req.query.pageNo && req.query.perPage) {
+        req.query.perPage = parseInt(req.query.perPage);
+        req.query.pageNo = parseInt(req.query.pageNo);
+        offset = req.query.perPage * (req.query.pageNo - 1);
+        limit = req.query.perPage;
+      } else {
+        offset = 0;
+        limit = 20;
+      }
+      result = await taskModel.find({}).skip(offset).limit(limit);
+    }
+    res.status(200).json({
+      status: httpStatus.OK,
+      message: constants.constants.SUCCCESS_MSG,
+      data: result,
+      count: result.length,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).send({
