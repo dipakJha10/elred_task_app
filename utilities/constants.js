@@ -10,7 +10,7 @@ const constants = {
 
 const authConstants = {
   secret_key: "1234567890",
-  expires_in: "30s",
+  expires_in: "20h",
 };
 
 
