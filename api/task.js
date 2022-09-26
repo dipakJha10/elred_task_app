@@ -85,7 +85,7 @@ router.delete("/deleteTask", async (req, res) => {
   }
 });
 
-router.delete("/fecthTask", async (req, res) => {
+router.get("/fecthTask", async (req, res) => {
   try {
     let result;
     if (req.query.userId) {
