@@ -27,17 +27,18 @@ EndPoint:- api/otpLogin
 6. Creating Task:- Then once a user logged in they can create their task for which I have built a post api where user need to just post their task and status of the task. And it will store it into the the db.  And one more thing for the task verfication, like which user has created which task I have used the object Id of the document of the register user that also has been saved in the task document collection. So when the user requests by sending query in the with the email, it searches the user is geniune or not or it present in our db or not. If it is there then it take the information that is requested by the json object body and creates the task.
 EndPoint:- api/task
 
-5. Editing task:- For editing the task , a patch api need to be build. User can edit their task on the basis of their userID that is the object id of that particular user.
+5. Editing task:- For editing the task , a patch api need to be build. User can edit their task on the basis of their task_ID that is the object id of that particular task.
 EndPoint:- api/editTask
 
-6. Delete Task:- For the deleting a task user just need to send the user Id in the object body as an request for deleting the task. It will delete the task completely from the app.
+6. Delete Task:- For the deleting a task user just need to send the task_Id in the object body as an request for deleting the task. It will delete the task completely from the app.
 EndPoint:- api/deleteTask
 
 7. For the deployment I have used the heroku that is online platform for the app and website hosting. 
 Url of the heroku app is :- https://mysterious-reef-81155.herokuapp.com/
 
+8. one Get Api has been added for view tasks for the particular userID and userId as not been passed then view all the tasks.
 
-8. Stacks Used: Nodejs, express, mongoDB,Mongoose, JWT , Heroku, Postman for the the testing. 
+9. Stacks Used: Nodejs, express, mongoDB,Mongoose, JWT , Heroku, Postman for the the testing. 
 
 
 #Note: For the authentication session I have set the default value 30sec , But for the api testing we can increase the timing of the session in constants.js file in that is in the utiliies folder.
