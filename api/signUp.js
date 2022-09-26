@@ -166,11 +166,11 @@ router.get("/otpLogin", async (req, res) => {
       });
     } else {
       const token = await authService.signIn({
-        email: req.body.email,
+        email: req.body.otp,
       });
       let data = {
-        email: req.body.email,
         token: token,
+        expires_in: constants.authConstants.expires_in,
       };
       res.status(200).json({
         status: httpStatus.OK,
