@@ -1,0 +1,1161 @@
+{
+	"info": {
+		"_postman_id": "2b54c4b4-d38b-4a45-ad5a-58967de5a7fb",
+		"name": "elred_task_nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13375363"
+	},
+	"item": [
+		{
+			"name": "signUp api",
+			"item": [
+				{
+					"name": "SignUpUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"fullName\":\"Deepak jha\",\r\n     \"email\":\"dipakashyap01@gmail.com\",\r\n     \"password\":\"Deeepak@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/api/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"signUp"
+							]
+						},
+						"description": "This POST API is registering. While building this app, I assume that for using this app, user need to register itself.\n\nSo for registering the itself, user just need to send the required information as request. And then clicking at the submit button it will send the response back wheather user is registered or not.\n\n#### **End Point of the Sign Up or registering user is:-**\n\nmysterious-reef-81155.herokuapp.com/api/signUp\n\n#### **Request Body:**\n\n{ \"fullName\":\"Deepak kashyap\",\n\n\"email\":\"[dipakjha.16b@gmail.com](mailto:dipakjha.16b@gmail.com)\",\n\n\"password\":\"Deeepak@12345\"  \n}\n\n<img src=\"https://content.pstmn.io/c334fc7d-1d56-4a14-8621-18aaff564330/aW1hZ2UucG5n\" alt=\"Example%20of%20successfull%20registeration\" width=\"1291\" height=\"955\">\n\n<img src=\"https://content.pstmn.io/5ad1de73-3d33-4be5-bf6d-4b288cd0e1fa/aW1hZ2UucG5n\" alt=\"When%20register%20user%20try%20to%20register%20itself\" height=\"772\" width=\"760\">"
+					},
+					"response": [
+						{
+							"name": "SignUpUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"Deepak kashyap\",\r\n    \"email\": \"dipakjha.16b@gmail.com\",\r\n    \"password\": \"Deeepak@12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/signUp",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"signUp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "84"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"54-2g8HevKXRjK5ZCeFWb5udTaoOec\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 11:39:48 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Request Successfull..!!\",\n    \"data\": \"user has been registered\"\n}"
+						},
+						{
+							"name": "SignUpUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"fullName\":\"Deepak jha\",\r\n     \"email\":\"deepakddddd@gmail.com\",\r\n     \"password\":\"Deeepak@12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/signUp",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"signUp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "84"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"54-2g8HevKXRjK5ZCeFWb5udTaoOec\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Sep 2022 07:58:42 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Request Successfull..!!\",\n    \"data\": \"user has been registered\"\n}"
+						}
+					]
+				},
+				{
+					"name": "LogIn",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpcGFramhhLjE2YkBnbWFpbC5jb20iLCJpYXQiOjE2NjM2NjU4MjgsImV4cCI6MTY2MzY2NTg1OH0.CXvLGT3nYrUIsp-pBUZT969ERiK6YZHSMww5VrhsgWw\"",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"dipakjha.16b@gmail.com\",\r\n     \"password\":\"Deeepak@12345\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/passwordlogIn",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"passwordlogIn"
+							]
+						},
+						"description": "This is also a post API for logIn user with the email Id and password. So when a register user try to login with their credential that is emailId and password the app will generate an OTP and send it to the register email.The use case of this api has been finish. After receiving the OTP user can use this OTP to login to app. For that then a different endPoint is to be used.\n\nNote:- It also generate a token, but it at this point of time token is not be used any authentication because for user need to use OTP to generate a new token. That will use for the authentication. So though we don't token here but I have added it as only for use case.\n\n**End Point:-** mysterious-reef-81155.herokuapp.com/api/passwordlogIn\n\n#### Request Body:\n\n{ \"email\":\"[dipakjha.16b@gmail.com](mailto:dipakjha.16b@gmail.com)\",\n\n\"password\":\"Deeepak@12345\"  \n}\n\nExample:\n\n<img src=\"https://content.pstmn.io/c51aa2a6-ea21-441b-bb3d-48c3babbe450/aW1hZ2UucG5n\" width=\"838\" height=\"832\">\n\nEmail response:\n\n<img src=\"https://content.pstmn.io/31eb93f1-b5cd-4006-964c-0f2ace516460/aW1hZ2UucG5n\" width=\"1725\" height=\"817\">\n\nExample for using wrong credentials:\n\n<img src=\"https://content.pstmn.io/89fc96a9-4bb9-4db1-9e88-60f5d4dbae19/aW1hZ2UucG5n\" alt=\"\" height=\"811\" width=\"844\">"
+					},
+					"response": [
+						{
+							"name": "LogIn",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"email\":\"dipakjha.16b@gmail.com\",\r\n     \"password\":\"Deeepak@12345\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/passwordlogIn",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"passwordlogIn"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "297"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"129-2liPg7a2FSmCpGUQNgOpKz6NE3w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 12:04:57 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"PLease check your mail for the login OTP Code\",\n    \"data\": {\n        \"email\": \"dipakjha.16b@gmail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpcGFramhhLjE2YkBnbWFpbC5jb20iLCJpYXQiOjE2NjM4NDgyOTcsImV4cCI6MTY2Mzg0ODMyN30.sSGl7YvDcki-Ad1NJ-ou9QMirDI8LunDLv5NB7KyWlo\"\n    }\n}"
+						},
+						{
+							"name": "LogIn",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"email\":\"dipakjha.16b@gmail.com\",\r\n     \"password\":\"Deeepak@1234\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/passwordlogIn",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"passwordlogIn"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"4b-T7hpkm8ovFFl9ICT+526+L4lRfg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 12:14:06 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Username password does Not match..!!\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "logInOTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2NjU5NTcsImV4cCI6MTY2MzY2NTk4N30.tZPD3O12J47pYl1p4CqJ-IjLp9q-JVxc2GBREjrHp6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\": 491359\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/otpLogin",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"otpLogin"
+							]
+						},
+						"description": "Now finally this is an get api. Where user can send their OTP that is received in email. And if OTP has been found in the DB of the app , then it will generate token and send it back as response and successfully logged in message appear as response.\n\nEndPoint:\n\nmysterious-reef-81155.herokuapp.com/api/otpLogin\n\nExample\n\n<img src=\"https://content.pstmn.io/3d421b7f-1229-4f1c-a27e-f9832f42f1a6/aW1hZ2UucG5n\" alt=\"\" height=\"802\" width=\"748\">\n\nNow this token user can used to test other api as well."
+					},
+					"response": [
+						{
+							"name": "logInOTP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 491359\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/otpLogin",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"otpLogin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"cd-pVPubYiwzR3e+bLG+wAI6jDrW4A\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 12:37:35 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"You are successfully logged in\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM4NTAyNTUsImV4cCI6MTY2Mzg1MDI4NX0.AuGID6r_7Oj1CZY3i_TS2p99t_00BDBRPkIS4ki99ng\"\n    }\n}"
+						},
+						{
+							"name": "logInOTP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 746276\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/otpLogin",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"otpLogin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"cd-Np6k/L2LlsKq7rVHz9yBJFhQYqQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Sep 2022 12:52:25 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"You are successfully logged in\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjQxOTY3NDUsImV4cCI6MTY2NDE5Njc3NX0.1ngmHFZ4XHIll_QQ7FO7dHO3sYwmpkmIPpK-PEyxyKY\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "createOtp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"dipakjha.16b@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/emailLogin",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"emailLogin"
+							]
+						},
+						"description": "Again this is also a post api. The use case of this is when a register user only want to access the app by only using email. In this case use need an One time password to get it through.\n\nNote: Though this api is only for the register user who are already saved in the db, but we can make it for the user who are using the app first time also. But for the time being any register user can generate OTP and access the application.\n\nENDPOINT:\n\nmysterious-reef-81155.herokuapp.com/api/emailLogin\n\n#### Body Request:\n\n{ \"email\":\"[dipakjha.16b@gmail.com](mailto:dipakjha.16b@gmail.com)\" }\n\n#### Example:\n\n<img src=\"https://content.pstmn.io/9f6dfdf8-4ba8-4e02-a2f6-7a2dfe7d5ef8/aW1hZ2UucG5n\" width=\"1306\" height=\"931\">\n\n#### OTP received in email inbox:\n\n<img src=\"https://content.pstmn.io/73dd96cf-08d4-4ae5-bcfa-956654f00a48/aW1hZ2UucG5n\" width=\"1011\" height=\"594\">"
+					},
+					"response": [
+						{
+							"name": "createOtp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"email\":\"dipakjha.16b@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/emailLogin",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"emailLogin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"48-SRDT1xAKvz7v+AfYiIR5IEkLeXg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 12:22:00 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"PLease check your mail for the login OTP Code\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM4NTE0OTksImV4cCI6MTY2Mzg1MTUyOX0.s0R6GKXs8QLFvq_-OOtI-Y1Tr27HcvE6b8fdOI_kFnk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task\":\"coding daily for atleast 4hours\",\r\n    \"status\":\"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/task?email=dipakjha.16b@gmail.com",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"task"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "dipakjha.16b@gmail.com"
+								}
+							]
+						},
+						"description": "In this api user can create task by using its loged in bearer token and email id. For the infomation of the task that need to be stored, user can send it in request body.\n\n#### EndPoint:\n\nmysterious-reef-81155.herokuapp.com/api/task?email=dipakjha.16b@gmail.com\n\n#### Query Request:\n\n<img src=\"https://content.pstmn.io/1c2d9b30-68a7-4404-bc33-9ca7ff1479a7/aW1hZ2UucG5n\" width=\"805\" height=\"679\">\n\n#### BearerToken:-\n\n<img src=\"https://content.pstmn.io/1d9c4390-58c7-4e69-95a3-39d728b05f96/aW1hZ2UucG5n\" width=\"1297\" height=\"847\">\n\n##### Example of successfully task creation:\n\n<img src=\"https://content.pstmn.io/18f28840-0799-4b91-9f56-686ef45146c1/aW1hZ2UucG5n\" width=\"822\" height=\"801\">"
+					},
+					"response": [
+						{
+							"name": "create task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"task\":\"coding daily for atleast 4hours\",\r\n    \"status\":\"complete\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/task?email=dipakjha.16b@gmail.com",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"task"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "dipakjha.16b@gmail.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "231"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"e7-k5mewSXF4VMIxFvv5ygYsUXRpaY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 12:58:33 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Request Successfull..!!\",\n    \"data\": {\n        \"userId\": \"632c4984ce34d789d92a2428\",\n        \"task\": \"coding daily for atleast 4hours\",\n        \"status\": \"complete\",\n        \"_id\": \"632c5bf9ce34d789d92a2438\",\n        \"date\": \"2022-09-22T12:58:33.459Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "wrong token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"task\":\"coding daily for atleast 4hours\",\r\n    \"status\":\"complete\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/task?email=dipakjha.16b@gmail.com",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"task"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "dipakjha.16b@gmail.com"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"39-rGJfF3dy0w+cPruFaFZ975pC6FI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 13:13:12 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 403,\n    \"message\": \"Not Authorized..!!\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "editTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2NzMzOTYsImV4cCI6MTY2MzY3Njk5Nn0.zSpaF5NmHwP3_2dB1pYN_rHqTlb34_r3sOZ214_Apxw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Not completed yet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/editTask?userId=6329a3a6d2271a54f22072f4",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"editTask"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6329a3a6d2271a54f22072f4"
+								}
+							]
+						},
+						"description": "So for the updating task in the db. we user User Id as query request and update the task on the basis of this. And for this api also we need updated bearer token and right user Id that is object id of the user registered. And the information we need to change either it is task name or completion status.\n\n#### End point: --\n\nmysterious-reef-81155.herokuapp.com/api/editTask?userId=632c4984ce34d789d92a2428\n\n#### Example for Successfully updated:\n\n<img src=\"https://content.pstmn.io/8bba2099-1443-4f2b-b324-3651e8efe939/aW1hZ2UucG5n\" width=\"1288\" height=\"946\">\n\n#### Example if Wrong user Id or wrong token or bad request:\n\n<img src=\"https://content.pstmn.io/20bf3b22-2230-4a37-8df0-1ae79a22298c/aW1hZ2UucG5n\" width=\"1270\" height=\"858\">"
+					},
+					"response": [
+						{
+							"name": "editTask",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"Just thinking to start\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/editTask?userId=632c4984ce34d789d92a2428",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"editTask"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "632c4984ce34d789d92a2428"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "245"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f5-85Zwnvgzc/TVOgXfSEi4wnlUYzU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 13:22:32 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Request Successfull..!!\",\n    \"data\": {\n        \"_id\": \"632c5bf9ce34d789d92a2438\",\n        \"userId\": \"632c4984ce34d789d92a2428\",\n        \"task\": \"coding daily for atleast 4hours\",\n        \"status\": \"Just thinking to start\",\n        \"date\": \"2022-09-22T12:58:33.459Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "wrong USer Id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"Just thinking to start\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/editTask?userId=632c4984ce34d789d92a242",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"editTask"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "632c4984ce34d789d92a242"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"39-rGJfF3dy0w+cPruFaFZ975pC6FI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 13:23:45 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 403,\n    \"message\": \"Not Authorized..!!\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM4NTQ4ODEsImV4cCI6MTY2Mzg1NDkxMX0.IIGzStMNegMgcfl-_9dMXJNoPFNDppb51WV8AvrhgXo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"632c4984ce34d789d92a2428\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "mysterious-reef-81155.herokuapp.com/api/deleteTask",
+							"host": [
+								"mysterious-reef-81155",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteTask"
+							]
+						},
+						"description": "This is a delete api. We need only userId in the req body. And we able to delete that task information from the database.\n\n#### EndPoint:\n\nmysterious-reef-81155.herokuapp.com/api/deleteTask\n\nExample of deleting task:\n\n<img src=\"https://content.pstmn.io/3667b7b2-873a-46c6-9727-07a561f4edd3/aW1hZ2UucG5n\" alt=\"\" height=\"937\" width=\"1288\">"
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"632c4984ce34d789d92a2428\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "mysterious-reef-81155.herokuapp.com/api/deleteTask",
+									"host": [
+										"mysterious-reef-81155",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"deleteTask"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"32-zoIOAa9+DBbw6j0mR+jNmtx48Ts\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 13:55:06 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Request Successfull..!!\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "acess_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": ""
+		}
+	]
+}
