@@ -10,10 +10,15 @@ const userModel = models.user;
 
 router.post("/task", async (req, res) => {
   try {
-    const user = await userModel.findOne({ email: req.query.email });
-    console.log(user);
+    const bearerHeader = req.headers["authorization"];
+    const bearer = bearerHeader.split(" ");
+    const bearerToken = bearer[1];
+    console.log(bearerToken);
+    let tokendata = parseJwt(bearerToken);
+    console.log(tokendata);
+
     const task = new taskModel({
-      userId: user._id,
+      userId: tokendata.userId,
       task: req.body.task,
       status: req.body.status,
     });
@@ -30,7 +35,7 @@ router.post("/task", async (req, res) => {
     res.status(500).send({
       status: httpStatus.INTERNAL_SERVER_ERROR,
       message: constants.constants.FAILURE_MSG,
-      data: null,
+      error: error.message,
     });
   }
 });
@@ -121,5 +126,9 @@ router.get("/fecthTask", async (req, res) => {
     });
   }
 });
+
+function parseJwt(token) {
+  return JSON.parse(Buffer.from(token.split(".")[1], "base64").toString());
+}
 
 module.exports = router;

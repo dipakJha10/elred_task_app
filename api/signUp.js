@@ -159,6 +159,9 @@ router.get("/otpLogin", async (req, res) => {
     const otp = await userAuthModel.findOne({
       otp: req.body.otp,
     });
+    const user = await userModel.findOne({
+      email: otp.email,
+    });
     if (!otp) {
       res.status(500).json({
         status: httpStatus.INTERNAL_SERVER_ERROR,
@@ -166,7 +169,8 @@ router.get("/otpLogin", async (req, res) => {
       });
     } else {
       const token = await authService.signIn({
-        email: req.body.otp,
+        email: otp.email,
+        userId: user._id,
       });
       let data = {
         token: token,

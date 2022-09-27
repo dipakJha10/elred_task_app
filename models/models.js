@@ -33,6 +33,11 @@ const authModel = new mongoose.Schema({
   },
 });
 
+var enu = {
+  values: ["Completed", "InComplete"],
+  message: `status should be Completed or InComplete `,
+};
+
 const taskModel = new mongoose.Schema({
   userId: {
     type: String,
@@ -48,6 +53,8 @@ const taskModel = new mongoose.Schema({
   },
   status: {
     type: String,
+    required: [true, "Task Status is required"],
+    enum: enu,
   },
 });
 
