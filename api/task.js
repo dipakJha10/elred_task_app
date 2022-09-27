@@ -46,6 +46,7 @@ router.patch("/editTask", async (req, res) => {
   try {
     const task = await taskModel.findByIdAndUpdate(req.body.task_id, req.body, {
       new: true,
+      runValidators: true,
     });
     console.log(task);
     res.status(200).json({
@@ -58,7 +59,7 @@ router.patch("/editTask", async (req, res) => {
     res.status(500).send({
       status: httpStatus.INTERNAL_SERVER_ERROR,
       message: constants.constants.FAILURE_MSG,
-      data: null,
+      error: error.message,
     });
   }
 });
