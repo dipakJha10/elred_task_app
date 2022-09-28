@@ -176,6 +176,19 @@ router.get("/otpLogin", async (req, res) => {
         token: token,
         expires_in: constants.authConstants.expires_in,
       };
+      const auth_token = await userAuthModel.findOneAndUpdate(
+        { email: otp.email },
+        {
+          token: token,
+          isActive: true,
+        },
+        {
+          new: true,
+          upsert: true,
+          rawResult: true, // Return the raw result from the MongoDB driver
+        }
+      );
+      console.log(auth_token);
       res.status(200).json({
         status: httpStatus.OK,
         message: "You are successfully logged in",
@@ -191,5 +204,9 @@ router.get("/otpLogin", async (req, res) => {
     });
   }
 });
+
+
+
+
 
 module.exports = router;

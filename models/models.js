@@ -31,6 +31,12 @@ const authModel = new mongoose.Schema({
   otp: {
     type: Number,
   },
+  token: {
+    type: String,
+  },
+  isActive: {
+    type: Boolean,
+  },
 });
 
 var enu = {

@@ -10,11 +10,7 @@ const userModel = models.user;
 
 router.post("/task", async (req, res) => {
   try {
-    const bearerHeader = req.headers["authorization"];
-    const bearer = bearerHeader.split(" ");
-    const bearerToken = bearer[1];
-    console.log(bearerToken);
-    let tokendata = parseJwt(bearerToken);
+    let tokendata = parseJwt(req.token);
     console.log(tokendata);
 
     const task = new taskModel({
@@ -44,16 +40,30 @@ router.post("/task", async (req, res) => {
 
 router.patch("/editTask", async (req, res) => {
   try {
-    const task = await taskModel.findByIdAndUpdate(req.body.task_id, req.body, {
-      new: true,
-      runValidators: true,
-    });
-    console.log(task);
-    res.status(200).json({
-      status: httpStatus.OK,
-      message: constants.constants.SUCCCESS_MSG,
-      data: task,
-    });
+    const token = parseJwt(req.token);
+    const taskData = await taskModel.findById(req.body.task_id);
+    if (taskData.userId === token.userId) {
+      const task = await taskModel.findOneAndUpdate(
+        req.body.task_id,
+        req.body,
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+      console.log(task);
+      res.status(200).json({
+        status: httpStatus.OK,
+        message: constants.constants.SUCCCESS_MSG,
+        data: task,
+      });
+    } else {
+      res.status(200).json({
+        status: httpStatus.OK,
+        message: constants.constants.FAILURE_MSG,
+        error: "Not Authorised, task is woned by other user",
+      });
+    }
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -68,8 +78,10 @@ router.patch("/editTask", async (req, res) => {
 
 router.delete("/deleteTask", async (req, res) => {
   try {
-    const task = await taskModel.findByIdAndDelete(req.body.task_id);
-    if (task) {
+    const token = parseJwt(req.token);
+    const taskData = await taskModel.findById(req.body.task_id);
+    if (taskData.userId === token.userId) {
+      const task = await taskModel.findByIdAndDelete(req.body.task_id);
       res.status(200).json({
         status: httpStatus.OK,
         message: constants.constants.SUCCCESS_MSG,
@@ -77,8 +89,8 @@ router.delete("/deleteTask", async (req, res) => {
     } else {
       res.status(200).json({
         status: httpStatus.OK,
-
-        message: "specified task is not there",
+        message: constants.constants.FAILURE_MSG,
+        error: "Not Authorised, task is owned by other user",
       });
     }
   } catch (error) {
@@ -91,7 +103,9 @@ router.delete("/deleteTask", async (req, res) => {
   }
 });
 
-router.get("/fecthTask", async (req, res) => {
+// view all tasks
+
+router.get("/fetchTask", async (req, res) => {
   try {
     let result;
     if (req.query.userId) {
@@ -120,6 +134,36 @@ router.get("/fecthTask", async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    res.status(500).send({
+      status: httpStatus.INTERNAL_SERVER_ERROR,
+      message: constants.constants.FAILURE_MSG,
+      data: null,
+    });
+  }
+});
+
+// logout api
+
+router.post("/logout", async (req, res) => {
+  try {
+    const token = parseJwt(req.token);
+    const acess_token = await userAuthModel.findOneAndUpdate(
+      token.email,
+      {
+        isActive: false,
+      },
+      {
+        new: true,
+        upsert: true,
+        rawResult: true, // Return the raw result from the MongoDB driver
+      }
+    );
+    res.status(200).json({
+      status: httpStatus.LOGIN_TIME_OUT,
+      message: constants.constants.FORBIDDEN_MSG,
+      data: "User has been logout",
+    });
+  } catch (eror) {
     res.status(500).send({
       status: httpStatus.INTERNAL_SERVER_ERROR,
       message: constants.constants.FAILURE_MSG,
